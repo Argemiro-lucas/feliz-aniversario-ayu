@@ -9,16 +9,19 @@
 </head>
 <body>
 
-    <!-- Cabeçalho Simplificado apenas com a Logo -->
+    <!-- Cabeçalho Simplificado com a Logo e o NOVO Botão de Menu para Celular -->
     <header>
         <div class="logo-container">
             <img src="ayu_1.jpeg" alt="Ayu e Amigo" class="img-logo">
             <div class="logo">Ayu <span>Voltari</span></div>
         </div>
+        <!-- Botão de Menu que só aparece no celular -->
+        <button id="btn-menu-mobile" class="menu-toggle-btn">Menu ☰</button>
     </header>
 
-    <!-- BARRA LATERAL VERTICAL FIXA NA DIREITA (SIDEBAR) -->
-    <aside class="sidebar-direita">
+    <!-- BARRA LATERAL VERTICAL (Adicionado ID e botão de fechar para o celular) -->
+    <aside class="sidebar-direita" id="sidebar-menu">
+        <button id="btn-fechar-menu" class="close-menu-btn">&times; Fechar</button>
         <button id="btn-contato" class="btn-primary">NÃO aperte</button>
         <nav class="nav-vertical">
             <ul>
@@ -40,7 +43,6 @@
                 <p>Clique nos botões do menu ao lado para<br>descobrir surpresas especiais feitas para você.</p>
                 
                 <div class="cta-buttons">
-                    <!-- BOTÃO CORRIGIDO: Agora com a classe btn-primary correta para voltar a ser roxo -->
                     <button class="btn-primary js-popup" data-target="popup-aniversario">Ver Mensagem</button>
                     <button id="btn-secundario-perigo" class="btn-secondary">Não clique aqui</button>
                 </div>
@@ -54,8 +56,7 @@
         </div>
     </main>
 
-    <!-- JANELAS POP-UP (MODAIS) MODIFICADAS COM SEUS TEXTOS -->
-    <!-- Pop-up: Quem ela é? -->
+    <!-- JANELAS POP-UP (MODAIS) -->
     <div id="popup-quem-ela-e" class="modal">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
@@ -64,23 +65,19 @@
             <br>
             <p>Ela é inteligente, bonita, carismática e, acima de tudo, ela é a Ayu. Por mais que ela não veja às vezes a pessoa maravilhosa que ela é, para mim ela é a menina mais inteligente desse mundo! E não é por "sorte" ou por coisas desse tipo: a Ayu se esforça mais do que qualquer pessoa e, por mais que ela possa se sentir mal, ela continua seguindo em frente.</p>
             <br>
-            <p>Ela é a mulher mais incrível que eu conheço. Eu poderia colocar mais 100.000 palavras e mesmo assim não seria suficiente para descrevê-la. Ayu, você é muito importante para mim, te amo! :)</p>
+            <p>Ela é a mulher mais incrível que eu conheço. Eu poderia colocar mais 100.000 palavras e mesmo assim não seria suficiente para descrevê-la. Ayu, você é muito importante para mim, te amo :)</p>
         </div>
     </div>
 
-    <!-- Pop-up: Sobre ela -->
     <div id="popup-sobre-ela" class="modal">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
             <h2>Sobre ela ✨</h2>
             <p>Não tem nem o que dizer sobre ela! Ela já ganhou diversos prêmios, além de sempre melhorar meu dia quando converso com ela. Ela sabe tocar instrumentos (toca muito bem, ok? —), sabe fazer de tudo e mais um pouco e, além disso, é uma ótima artist- (e sério, olha esse lindo desenho-)</p>
-            
-            <!-- Imagem no final do menu Sobre ela -->
             <img src="artista.jpeg" alt="Talentos da Ayu" class="img-popup-sub">
         </div>
     </div>
 
-    <!-- Pop-up: Rawr rawr- MODIFICADO COM TEXTO GIGANTE -->
     <div id="popup-rawr" class="modal">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
@@ -88,12 +85,10 @@
             <p style="word-break: break-word;">
                 rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr RAWR!
             </p>
-            <!-- Espaço reservado para colocar a foto no final do menu Rawr -->
             <img src="jack2.jpeg" alt="Foto Dinossauro Ayu" class="img-popup-sub">
         </div>
     </div>
 
-    <!-- Pop-up: FELIZ ANIVERSÁRIO ATUALIZADO COM SEU TEXTO REAL -->
     <div id="popup-aniversario" class="modal">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
@@ -105,9 +100,7 @@
             <p>E nossa, nem parece que faz 3 anos que a gente se conheceu! Faz 3 anos que eu entrei no TikTok e cliquei sem querer várias vezes no 👋🏽 pensando que tinha bugado KSKS. Bem, eu queria dizer que esses 3 anos de amizade foram incríveis para mim. As risadas, os momentos que passamos... tudo foi extremamente incrível!</p>
             <br>
             <p>Obrigado por tudo que fez por mim, Ayu. Eu te amo, muito mesmo! E rawr rawr- 🦖💜</p>
-            
-            <!-- Imagem de fundo do pop-up de aniversário -->
-            
+            <img src="foto-niver.jpg" alt="Parabéns Ayu" class="img-popup-sub">
         </div>
     </div>
 
@@ -121,8 +114,7 @@
         </div>
     </div>
 
-    <!-- IMAGENS INTERATIVAS DA ESQUERDA (BORRADAS ATÉ O CLIQUE) -->
-    <!-- Canto Superior Esquerdo -->
+    <!-- IMAGENS INTERATIVAS DA ESQUERDA -->
     <div class="canto-revelar canto-sup-esq js-revelar-canto">
         <div class="canto-overlay">
             <p>fotos que achei legais</p>
@@ -131,7 +123,6 @@
         <img src="roblox.jpeg" alt="Foto Superior Esquerda" class="img-borravel">
     </div>
 
-    <!-- Canto Inferior Esquerdo -->
     <div class="canto-revelar canto-inf-esq js-revelar-canto">
         <div class="canto-overlay">
             <p>fotos que achei legais</p>
