@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Aniversário, Ayu!</title>
+    <!-- Vincula o arquivo CSS que está na mesma pasta -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho Simplificado apenas com a Logo -->
+    <header>
+        <div class="logo-container">
+            <img src="ayu_1.jpeg" alt="Ayu e Amigo" class="img-logo">
+            <div class="logo">Ayu <span>Voltari</span></div>
+        </div>
+    </header>
+
+    <!-- BARRA LATERAL VERTICAL FIXA NA DIREITA (SIDEBAR) -->
+    <aside class="sidebar-direita">
+        <button id="btn-contato" class="btn-primary">NÃO aperte</button>
+        <nav class="nav-vertical">
+            <ul>
+                <li><a href="#" class="js-popup active" data-target="popup-quem-ela-e">Quem elaé?</a></li>
+                <li><a href="#" class="js-popup" data-target="popup-sobre-ela">sobre ela</a></li>
+                <li><a href="#" class="js-popup" data-target="popup-rawr">rawr rawr-</a></li>
+                <li><a href="#" class="js-popup" data-target="popup-aniversario">FELIZ ANVERSARIO</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Seção Principal -->
+    <main class="hero">
+        <div class="hero-container">
+            
+            <!-- Lado Esquerdo: Conteúdo e Textos -->
+            <div class="hero-content">
+                <h1>Parabéns para a<br><span class="text-gradient">Ayu Voltari!</span></h1>
+                <p>Clique nos botões do menu ao lado para<br>descobrir surpresas especiais feitas para você.</p>
+                
+                <div class="cta-buttons">
+                    <!-- BOTÃO CORRIGIDO: Agora com a classe btn-primary correta para voltar a ser roxo -->
+                    <button class="btn-primary js-popup" data-target="popup-aniversario">Ver Mensagem</button>
+                    <button id="btn-secundario-perigo" class="btn-secondary">Não clique aqui</button>
+                </div>
+            </div>
+
+            <!-- Lado Direito: Imagem de Destaque Direta -->
+            <div class="hero-image-area">
+                <img src="Aristocrata Convida para um Chá.png" alt="Destaque da Ayu" class="img-grande-direita">
+            </div>
+
+        </div>
+    </main>
+
+    <!-- JANELAS POP-UP (MODAIS) MODIFICADAS COM SEUS TEXTOS -->
+    <!-- Pop-up: Quem ela é? -->
+    <div id="popup-quem-ela-e" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Quem ela é? 🤔</h2>
+            <p>A Ayu é uma pessoa incrível, uma das melhores amizades que eu já tive e que tenho o prazer de ter até hoje. Conheci ela em 2023, e desde lá ela tem sido uma pessoa extremamente especial para mim.</p>
+            <br>
+            <p>Ela é inteligente, bonita, carismática e, acima de tudo, ela é a Ayu. Por mais que ela não veja às vezes a pessoa maravilhosa que ela é, para mim ela é a menina mais inteligente desse mundo! E não é por "sorte" ou por coisas desse tipo: a Ayu se esforça mais do que qualquer pessoa e, por mais que ela possa se sentir mal, ela continua seguindo em frente.</p>
+            <br>
+            <p>Ela é a mulher mais incrível que eu conheço. Eu poderia colocar mais 100.000 palavras e mesmo assim não seria suficiente para descrevê-la. Ayu, você é muito importante para mim, te amo! :)</p>
+        </div>
+    </div>
+
+    <!-- Pop-up: Sobre ela -->
+    <div id="popup-sobre-ela" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Sobre ela ✨</h2>
+            <p>Não tem nem o que dizer sobre ela! Ela já ganhou diversos prêmios, além de sempre melhorar meu dia quando converso com ela. Ela sabe tocar instrumentos (toca muito bem, ok? —), sabe fazer de tudo e mais um pouco e, além disso, é uma ótima artist- (e sério, olha esse lindo desenho-)</p>
+            
+            <!-- Imagem no final do menu Sobre ela -->
+            <img src="artista.jpeg" alt="Talentos da Ayu" class="img-popup-sub">
+        </div>
+    </div>
+
+    <!-- Pop-up: Rawr rawr- MODIFICADO COM TEXTO GIGANTE -->
+    <div id="popup-rawr" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Rawr rawr- 🦖</h2>
+            <p style="word-break: break-word;">
+                rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr rawr RAWR!
+            </p>
+            <!-- Espaço reservado para colocar a foto no final do menu Rawr -->
+            <img src="jack2.jpeg" alt="Foto Dinossauro Ayu" class="img-popup-sub">
+        </div>
+    </div>
+
+    <!-- Pop-up: FELIZ ANIVERSÁRIO ATUALIZADO COM SEU TEXTO REAL -->
+    <div id="popup-aniversario" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>🎉 FELIZ ANIVERSÁRIO, AYUUU! 🎉</h2>
+            <p>Eu fiz esse site como um pequeno presente para representar um pouco da nossa amizade kksks. Sei que às vezes a gente passa um longo tempo sem se falar, mas eu queria dizer que sempre é incrível conversar com você, ouvir você falando sobre como foi seu dia, sobre coisas que aconteceram... Isso sempre me deixa feliz!</p>
+            <br>
+            <p>Eu fico tão realizado quando vejo que você está bem, e quando você não está eu fico triste (e desculpa por não poder ajudar muito com isso). Mas eu quero te desejar um feliz aniversário, sua tabacuda-</p>
+            <br>
+            <p>E nossa, nem parece que faz 3 anos que a gente se conheceu! Faz 3 anos que eu entrei no TikTok e cliquei sem querer várias vezes no 👋🏽 pensando que tinha bugado KSKS. Bem, eu queria dizer que esses 3 anos de amizade foram incríveis para mim. As risadas, os momentos que passamos... tudo foi extremamente incrível!</p>
+            <br>
+            <p>Obrigado por tudo que fez por mim, Ayu. Eu te amo, muito mesmo! E rawr rawr- 🦖💜</p>
+            
+            <!-- Imagem de fundo do pop-up de aniversário -->
+            
+        </div>
+    </div>
+
+    <!-- TELA DO JUMPSCARE E CONTAGEM -->
+    <div id="jumpscare-overlay" class="jumpscare-screen">
+        <div id="jumpscare-countdown" class="countdown-text"></div>
+        <div id="jumpscare-content" class="jumpscare-content hidden">
+            <img src="jack_juniors1.jpeg" alt="Jumpscare!" class="jumpscare-img">
+            <h1 class="jumpscare-title">EU AVISEI!</h1>
+            <button id="btn-fechar-susto" class="btn-primary" style="margin-top: 20px;">Remover susto 😂</button>
+        </div>
+    </div>
+
+    <!-- IMAGENS INTERATIVAS DA ESQUERDA (BORRADAS ATÉ O CLIQUE) -->
+    <!-- Canto Superior Esquerdo -->
+    <div class="canto-revelar canto-sup-esq js-revelar-canto">
+        <div class="canto-overlay">
+            <p>fotos que achei legais</p>
+            <span>Clique para revelar </span>
+        </div>
+        <img src="roblox.jpeg" alt="Foto Superior Esquerda" class="img-borravel">
+    </div>
+
+    <!-- Canto Inferior Esquerdo -->
+    <div class="canto-revelar canto-inf-esq js-revelar-canto">
+        <div class="canto-overlay">
+            <p>fotos que achei legais</p>
+            <span>Clique para revelar </span>
+        </div>
+        <img src="jackson.jpeg" alt="Foto Inferior Esquerda" class="img-borravel">
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2026 Feito com 💜 para Ayu Voltari.</p>
+    </footer>
+
+    <!-- Vincula o arquivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

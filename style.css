@@ -1,0 +1,426 @@
+/* Reset básico de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Cores e Fundo Suavizados */
+body {
+    background-color: #0f0f12; 
+    color: #f3f4f6; 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-x: hidden;
+    padding-right: 200px; 
+}
+
+/* Cabeçalho Superior Minimalista */
+header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px 8%;
+    background-color: #16161a; 
+    border-bottom: 2px solid #4c1d95; 
+    z-index: 10;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.img-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1.5px solid #8b5cf6;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.logo span {
+    color: #a78bfa; 
+}
+
+/* BARRA LATERAL VERTICAL FIXA NA DIREITA (SIDEBAR) */
+.sidebar-direita {
+    position: fixed;
+    right: 0;
+    top: 74px; 
+    width: 190px; 
+    height: calc(100vh - 74px); 
+    background-color: #16161a; 
+    border-left: 2px solid #4c1d95; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px 30px 15px; 
+    gap: 30px; 
+    z-index: 99; 
+}
+
+/* Menu Interno da Barra Lateral */
+.nav-vertical ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 20px; 
+    text-align: center;
+}
+
+.nav-vertical a {
+    color: #9ca3af;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    display: block;
+    padding: 5px 0;
+}
+
+.nav-vertical a:hover, .nav-vertical a.active {
+    color: #a78bfa;
+    transform: translateX(-2px); 
+}
+
+/* Configuração de Botões */
+button {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: 100%; 
+    text-align: center;
+}
+
+.sidebar-direita #btn-contato {
+    background-color: #6d28d9; 
+    color: white;
+    border: none;
+    padding: 15px 15px;
+    border-radius: 0 0 8px 8px; 
+}
+
+.sidebar-direita #btn-contato:hover {
+    background-color: #7c3aed;
+    box-shadow: 0 0px 15px rgba(109, 40, 217, 0.4);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #a78bfa;
+    border: 2px solid #6d28d9;
+    padding: 8px 20px;
+    border-radius: 8px;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(109, 40, 217, 0.15);
+    transform: translateY(-1px);
+}
+
+/* Estrutura Principal */
+.hero {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 40px 5%;
+    background: radial-gradient(circle at 30% center, #1e1135 0%, #0f0f12 75%); 
+}
+
+.hero-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    gap: 50px; 
+}
+
+/* Lado Esquerdo */
+.hero-content {
+    max-width: 420px; 
+    text-align: left;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.text-gradient {
+    background: linear-gradient(45deg, #a78bfa, #f472b6); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 16px;
+    color: #9ca3af;
+    margin-bottom: 35px;
+    line-height: 1.5;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: flex-start; 
+    gap: 15px;
+}
+
+/* Lado Direito */
+.hero-image-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 480px; 
+}
+
+.img-grande-direita {
+    width: 100%;
+    height: auto;
+    max-height: 60vh;
+    object-fit: contain;
+    border-radius: 12px;
+    filter: drop-shadow(0px 10px 20px rgba(109, 40, 217, 0.2)); 
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0f0f12;
+    color: #4b5563;
+    font-size: 13px;
+    border-top: 1px solid #1f1f23;
+    z-index: 10;
+    margin-right: 190px; 
+}
+
+/* POP-UPS (MODAIS) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 10, 12, 0.85);
+    backdrop-filter: blur(6px);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background-color: #16161a;
+    border: 2px solid #5b21b6;
+    padding: 30px;
+    width: 90%;
+    max-width: 480px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    color: #fff;
+    transform: scale(0.7);
+    animation: scaleUp 0.3s forwards ease;
+    max-height: 90vh; /* Impede que o pop-up passe do tamanho da tela */
+    overflow-y: auto; /* Adiciona barra de rolagem interna se o texto for gigante */
+}
+
+/* CORREÇÃO AQUI: Altera de cover para contain e ajusta as proporções para a foto ficar 100% inteira */
+.img-popup-sub {
+    width: 100%;
+    height: auto;
+    max-height: 380px; /* Limita a altura máxima para manter a harmonia visual */
+    object-fit: contain; /* Garante que toda a imagem apareça sem cortes */
+    border-radius: 8px;
+    margin-top: 20px;
+    border: 1px solid #4c1d95;
+    background-color: #16161a; /* Preenche com o fundo escuro se sobrar espaço nas laterais */
+}
+
+.modal h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: #c084fc;
+}
+
+.modal p {
+    color: #d1d5db;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #9ca3af;
+    font-size: 26px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-btn:hover {
+    color: #f472b6;
+}
+
+/* ==================== DOIS CANTOS DA ESQUERDA COM SISTEMA DE BLUR ==================== */
+.canto-revelar {
+    position: fixed;
+    width: 110px; 
+    height: 110px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    background-color: #16161a;
+}
+
+.canto-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 15, 18, 0.45); 
+    border: 1.5px dashed #6d28d9;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    text-align: center;
+    gap: 6px;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.canto-overlay p {
+    font-size: 9px;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+}
+
+.canto-overlay span {
+    font-size: 9px;
+    color: #a78bfa;
+    background-color: rgba(15, 15, 18, 0.8);
+    padding: 2px 6px;
+    border-radius: 10px;
+    border: 1px solid #6d28d9;
+}
+
+.img-borravel {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    filter: blur(12px) !important; 
+    transform: scale(1.1); 
+    transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.canto-revelar.revelado .img-borravel {
+    filter: blur(0px) !important; 
+    transform: scale(1);
+}
+
+.canto-revelar.revelado .canto-overlay {
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+.canto-sup-esq { top: 95px; left: 15px; }
+.canto-inf-esq { bottom: 65px; left: 15px; }
+
+/* ==================== ESTRUTURA DO JUMPSCARE ==================== */
+.jumpscare-screen {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000; 
+    z-index: 9999; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.countdown-text {
+    font-size: 120px;
+    font-weight: bold;
+    color: #7c3aed;
+    text-shadow: 0 0 30px rgba(124, 58, 237, 0.8);
+}
+
+.jumpscare-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: shakeEffect 0.15s infinite; 
+}
+
+.jumpscare-img {
+    max-width: 90vw;
+    max-height: 70vh;
+    border: 5px solid #dc2626;
+    box-shadow: 0 0 50px #dc2626;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+.jumpscare-title {
+    font-size: 60px;
+    color: #dc2626; 
+    text-shadow: 0 0 20px #000, 0 0 10px #dc2626;
+    font-weight: 900;
+    margin-top: 15px;
+    letter-spacing: 2px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { background-color: rgba(0, 0, 0, 0); }
+    to { background-color: rgba(10, 10, 12, 0.85); }
+}
+
+@keyframes scaleUp {
+    to { transform: scale(1); }
+}
+
+@keyframes shakeEffect {
+    0% { transform: translate(2px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(0px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(2px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(2px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
